@@ -5,8 +5,9 @@ import pickle
 import uvicorn
 
 
-app = FastAPI()
+app = FastAPI()  # creating an instance of FastAPI
 
+# loading trained model
 pickle_in = open('classifier.pkl', 'rb')
 model = pickle.load(pickle_in)
 
@@ -33,4 +34,4 @@ def predict(data: BankNote):
 
 if __name__ == '__main__':
     uvicorn.run(app, host='127.0.0.1', port=8000)
-
+    # 'uvicorn mainapp:app --reload' to run it from command line
