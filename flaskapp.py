@@ -24,9 +24,10 @@ def predict():
     entropy = data[3]
     prediction_result = model.predict([[variance, skewness, curtosis, entropy]])
     if prediction_result[0] > 0.5:
-        result = "This is Bank Note"
-    else:
         result = "This is fake note"
+
+    else:
+        result = "This is Bank Note"
     return render_template('index.html', result=result)
 
 

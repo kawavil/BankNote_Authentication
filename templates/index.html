@@ -12,23 +12,25 @@
 </head>
 
 <body>
- <div class="login">
-	<h1>BankNote Authentication</h1>
+ <div class="login" style="margin-top: 100px;">
+	<center><h1>BankNote Authentication</h1></center>
 
      <!-- Main Input For Receiving Query to our ML -->
+     <center>
     <form action="{{ url_for('predict')}}" method="post">
     	<input type="text" name="Variance" placeholder="variance" required="required" />
         <input type="text" name="Skewness" placeholder="skewness" required="required" />
 		<input type="text" name="Curtosis" placeholder="curtosis" required="required" />
         <input type="text" name="Entropy" placeholder="entropy" required="required" />
-
+        <br><br>
         <button type="submit" class="btn btn-primary btn-block btn-large">Authenticate</button>
     </form>
-
+    </center>
    <br>
    <br>
-   {{ result }}
-
+     <center>
+         <h3>{{ result }}</h3>
+</center>
  </div>
 
 

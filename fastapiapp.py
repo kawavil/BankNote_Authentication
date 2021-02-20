@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from BankNote import BankNote
-import pandas as pd
 import pickle
 import uvicorn
 
